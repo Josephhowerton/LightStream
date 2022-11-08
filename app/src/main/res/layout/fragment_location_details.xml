@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="viewModel"
+            type="com.square.lightstream.viewmodel.LocationDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.LocationDetailsFragment">
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:text="@{viewModel.locationLiveData.name}"
+            android:background="@color/black_transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rick and Morty"/>
+
+        <TextView
+            android:id="@+id/text_view_type"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@{viewModel.locationLiveData.type}"
+            app:layout_constraintTop_toBottomOf="@id/text_view_name"/>
+
+        <TextView
+            android:id="@+id/text_view_dimension"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@{viewModel.locationLiveData.dimension}"
+            app:layout_constraintTop_toBottomOf="@id/text_view_type"/>
+
+        <TextView
+            android:id="@+id/text_view_residents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/title_residents"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_dimension" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_residents"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_residents" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

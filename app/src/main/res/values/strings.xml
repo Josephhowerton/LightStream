@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LightStream</string>
+    <string name="title_button_character">Characters</string>
+    <string name="title_button_location">Locations</string>
+    <string name="title_welcome_fragment">Welcome!</string>
+    <string name="message_welcome_fragment">To see a list of characters from Rick and Morty, click Characters. For a list of locations, click Locations.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_profile_image">Profile Image</string>
+    <string name="title_dimension">Dimension</string>
+    <string name="title_residents">Residents</string>
+    <string name="title_episodes">Episodes</string>
+
+    <string name="title_error">Oh no!</string>
+    <string name="message_error">The data you requested is unavailable. Please try again later.</string>
+    <string name="title_error_button">OK</string>
+</resources>

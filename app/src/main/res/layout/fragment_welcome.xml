@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.square.lightstream.viewmodel.WelcomeViewModel" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.WelcomeFragment"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp">
+
+        <TextView
+            android:text="@string/title_welcome_fragment"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="40dp"/>
+
+        <TextView
+            android:text="@string/message_welcome_fragment"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp"/>
+
+        <Button
+            android:id="@+id/button_characters"
+            android:text="@string/title_button_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{ () -> viewModel.onClickCharacterButton() }"/>
+
+        <Button
+            android:id="@+id/button_location"
+            android:text="@string/title_button_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{ () -> viewModel.onClickLocationButton() }"/>
+
+    </LinearLayout>
+</layout>
